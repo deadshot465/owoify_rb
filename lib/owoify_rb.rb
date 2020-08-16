@@ -6,14 +6,10 @@ require 'utility/presets'
 
 module Owoify
   def self.owoify(source, level = 'owo')
-    word_matches = source.scan(/[^\s]+/)
-    space_matches = source.scan(/\s+/)
-    words = word_matches.map do |x|
-      return Word.new(x)
-    end
-    spaces = space_matches.map do |x|
-      return Word.new(x)
-    end
+    word_matches = source.scan(/[^\s]+/).flatten
+    space_matches = source.scan(/\s+/).flatten
+    words = word_matches.map { |x| Word.new(x) }
+    spaces = space_matches.map { |x| Word.new(x) }
     _level = level.downcase
     words.map! do |w|
       SPECIFIC_WORD_MAPPING_LIST.each do |f|

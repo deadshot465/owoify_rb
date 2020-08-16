@@ -31,7 +31,7 @@ class Word
 
     replacing_word = @word
     replacing_word = @word.gsub(search_value, replace_value) if search_value.match? @word
-    collection = @word.scan(search_value)
+    collection = @word.scan(search_value).flatten
     replaced_words = collection.length > 1 ? collection.map { |x| x.gsub(x, replace_value) } : []
 
     if replacing_word != @word
@@ -50,10 +50,10 @@ class Word
 
     replacing_word = @word
     if search_value.match? @word
-      match = @word.match(search_value)
+      match = @word.match(search_value)[0]
       replacing_word = @word.gsub(match, replace_value)
     end
-    collection = @word.scan(search_value)
+    collection = @word.scan(search_value).flatten
     replaced_words = collection.length > 1 ? collection.map { |x| x.gsub(x, replace_value) } : []
     if replacing_word != @word
       replaced_words.each do |word|
@@ -74,7 +74,7 @@ class Word
     return self if !replace_replaced_words && search_value_contains_replaced_words(search_value, replace_value)
 
     replacing_word = @word.gsub(captures[0], replace_value)
-    collection = @word.scan(search_value)
+    collection = @word.scan(search_value).flatten
     replaced_words = collection.length > 1 ? collection.map { |x| x.gsub(x, replace_value) } : []
     if replacing_word != @word
       replaced_words.each do |w|
