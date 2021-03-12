@@ -1,0 +1,7 @@
+# TypeProf 0.12.0
+
+# Classes
+class Object
+  private
+  def interleave_arrays: (a: Array, b: Array) -> Array
+end

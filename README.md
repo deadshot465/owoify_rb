@@ -21,7 +21,7 @@ Because [RubyGems.org](https://rubygems.org/) doesn't have any owoify package. A
 ## Install instructions
 Add it to your `Gemfile` file:
 ```
-gem 'owoify_rb', '~> 0.0.1'
+gem 'owoify_rb', '~> 0.0.3'
 ```
 Or run this command in your command line:
 ```bash

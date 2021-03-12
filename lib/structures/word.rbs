@@ -1,0 +1,18 @@
+# TypeProf 0.12.0
+
+# Classes
+class Word
+  @replaced_words: Set[String]
+  @word: String
+
+  def initialize: (word: String) -> void
+  def to_s: -> String
+
+  private
+  def search_value_contains_replaced_words: (search_value: Regexp, replace_value: String) -> bool
+
+  public
+  def replace: (search_value: Regexp, replace_value: String, replace_replaced_words: bool) -> Word
+  def replace_with_func_single: (search_value: Regexp, func: Proc, replace_replaced_words: bool) -> Word
+  def replace_with_func_multiple: (search_value: Regexp, func: Proc, replace_replaced_words: bool) -> Word
+end

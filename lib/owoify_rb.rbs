@@ -1,0 +1,6 @@
+# TypeProf 0.12.0
+
+# Classes
+module Owoify
+  def self.owoify: (source: String, level: String) -> String
+end

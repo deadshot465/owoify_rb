@@ -10,12 +10,12 @@ module Owoify
     space_matches = source.scan(/\s+/).flatten
     words = word_matches.map { |x| Word.new(x) }
     spaces = space_matches.map { |x| Word.new(x) }
-    _level = level.downcase
+    actual_level = level.downcase
     words.map! do |w|
       SPECIFIC_WORD_MAPPING_LIST.each do |f|
         w = f.call(w)
       end
-      case _level
+      case actual_level
       when 'owo'
         OWO_MAPPING_LIST.each do |f|
           w = f.call(w)

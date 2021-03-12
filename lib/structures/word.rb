@@ -2,6 +2,7 @@
 
 require 'set'
 
+# The core structure that stores information of the string to owoify and performs actual owoification.
 class Word
   def initialize(word)
     @replaced_words = Set.new
