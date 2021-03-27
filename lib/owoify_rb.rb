@@ -4,7 +4,11 @@ require 'structures/word'
 require 'utility/interleave_arrays'
 require 'utility/presets'
 
+# Owoify module is the main module where owoify function lies in.
+# Since owoify is literally just a function, users are expected to invoke owoify by calling Owoify.owoify().
 module Owoify
+  # The main entry point of the owoify function.
+  # Pass in the source string and the desired owoify level.
   def self.owoify(source, level = 'owo')
     word_matches = source.scan(/[^\s]+/).flatten
     space_matches = source.scan(/\s+/).flatten

@@ -1,3 +1,8 @@
+## 0.1.0
+- Apply RuboCop
+- Fix some bugs
+- Apply proper semantic versioning (should have been 0.1.0 since long time ago)
+
 ## 0.0.3
 - Add experimental RBS support.
 

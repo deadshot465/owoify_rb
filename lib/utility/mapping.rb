@@ -87,8 +87,8 @@ module Mapping
   end
 
   MAP_DEAD_TO_DED = lambda do |input|
-    input = input.replace(DEAD_TO_DED_UPPER, 'Ded')
-    input.replace(DEAD_TO_DED_LOWER, 'ded')
+    input.replace(DEAD_TO_DED_UPPER, 'Ded')
+         .replace(DEAD_TO_DED_LOWER, 'ded')
   end
 
   MAP_N_VOWEL_T_TO_ND = lambda do |input|
@@ -96,33 +96,32 @@ module Mapping
   end
 
   MAP_READ_TO_WEAD = lambda do |input|
-    input = input.replace(READ_TO_WEAD_UPPER, 'Wead')
-    input.replace(READ_TO_WEAD_LOWER, 'wead')
+    input.replace(READ_TO_WEAD_UPPER, 'Wead')
+         .replace(READ_TO_WEAD_LOWER, 'wead')
   end
 
   MAP_BRACKETS_TO_STAR_TRAILS = lambda do |input|
-    input = input.replace(BRACKETS_TO_STARTRAILS_FORE, '｡･:*:･ﾟ★,｡･:*:･ﾟ☆')
-    input.replace(BRACKETS_TO_STARTRAILS_REAR, '☆ﾟ･:*:･｡,★ﾟ･:*:･｡')
+    input.replace(BRACKETS_TO_STARTRAILS_FORE, '｡･:*:･ﾟ★,｡･:*:･ﾟ☆')
+         .replace(BRACKETS_TO_STARTRAILS_REAR, '☆ﾟ･:*:･｡,★ﾟ･:*:･｡')
   end
 
   MAP_PERIOD_COMMA_EXCLAMATION_SEMICOLON_TO_KAOMOJIS = lambda do |input|
-    num = rand * FACES.length
-    index = num.floor
-    input = input.replace_with_func_single(PERIOD_COMMA_EXCLAMATION_SEMICOLON_TO_KAOMOJIS_FIRST, lambda { " #{FACES[index]}" })
-
-    num = rand * FACES.length
-    index = num.floor
-    input.replace_with_func_single(PERIOD_COMMA_EXCLAMATION_SEMICOLON_TO_KAOMOJIS_SECOND, lambda { " #{FACES[index]}" })
+    input.replace_with_func_single(PERIOD_COMMA_EXCLAMATION_SEMICOLON_TO_KAOMOJIS_FIRST, lambda {
+                                                                                           " #{FACES[rand(FACES.length)]}"
+                                                                                         })
+         .replace_with_func_single(PERIOD_COMMA_EXCLAMATION_SEMICOLON_TO_KAOMOJIS_SECOND, lambda {
+                                                                                            " #{FACES[rand(FACES.length)]}"
+                                                                                          })
   end
 
   MAP_THAT_TO_DAT = lambda do |input|
-    input = input.replace(THAT_TO_DAT_LOWER, 'dat')
-    input.replace(THAT_TO_DAT_UPPER, 'Dat')
+    input.replace(THAT_TO_DAT_LOWER, 'dat')
+         .replace(THAT_TO_DAT_UPPER, 'Dat')
   end
 
   MAP_TH_TO_F = lambda do |input|
-    input = input.replace(TH_TO_F_LOWER, 'f')
-    input.replace(TH_TO_F_UPPER, 'F')
+    input.replace(TH_TO_F_LOWER, 'f')
+         .replace(TH_TO_F_UPPER, 'F')
   end
 
   MAP_LE_TO_WAL = lambda do |input|
@@ -130,8 +129,8 @@ module Mapping
   end
 
   MAP_VE_TO_WE = lambda do |input|
-    input = input.replace(VE_TO_WE_LOWER, 'we')
-    input.replace(VE_TO_WE_UPPER, 'We')
+    input.replace(VE_TO_WE_LOWER, 'we')
+         .replace(VE_TO_WE_UPPER, 'We')
   end
 
   MAP_RY_TO_WWY = lambda do |input|
@@ -139,8 +138,8 @@ module Mapping
   end
 
   MAP_R_OR_L_TO_W = lambda do |input|
-    input = input.replace(RORL_TO_W_LOWER, 'w')
-    input.replace(RORL_TO_W_UPPER, 'W')
+    input.replace(RORL_TO_W_LOWER, 'w')
+         .replace(RORL_TO_W_UPPER, 'W')
   end
 
   MAP_LL_TO_WW = lambda do |input|
@@ -148,33 +147,33 @@ module Mapping
   end
 
   MAP_VOWEL_OR_R_EXCEPT_O_L_TO_WL = lambda do |input|
-    input = input.replace(VOWEL_OR_R_EXCEPT_O_L_TO_WL_LOWER, 'wl')
-    input.replace(VOWEL_OR_R_EXCEPT_O_L_TO_WL_UPPER, 'W\1')
+    input.replace(VOWEL_OR_R_EXCEPT_O_L_TO_WL_LOWER, 'wl')
+         .replace(VOWEL_OR_R_EXCEPT_O_L_TO_WL_UPPER, 'W\1')
   end
 
   MAP_OLD_TO_OWLD = lambda do |input|
-    input = input.replace(OLD_TO_OWLD_LOWER, '\1wld')
-    input.replace(OLD_TO_OWLD_UPPER, 'OWLD')
+    input.replace(OLD_TO_OWLD_LOWER, '\1wld')
+         .replace(OLD_TO_OWLD_UPPER, 'OWLD')
   end
 
   MAP_OL_TO_OWL = lambda do |input|
-    input = input.replace(OL_TO_OWL_LOWER, '\1wl')
-    input.replace(OL_TO_OWL_UPPER, 'OWL')
+    input.replace(OL_TO_OWL_LOWER, '\1wl')
+         .replace(OL_TO_OWL_UPPER, 'OWL')
   end
 
   MAP_L_OR_R_O_TO_WO = lambda do |input|
-    input = input.replace(LORR_O_TO_WO_LOWER, 'wo')
-    input.replace(LORR_O_TO_WO_UPPER, 'W\1')
+    input.replace(LORR_O_TO_WO_LOWER, 'wo')
+         .replace(LORR_O_TO_WO_UPPER, 'W\1')
   end
 
   MAP_SPECIFIC_CONSONANTS_O_TO_LETTER_AND_WO = lambda do |input|
-    input = input.replace(SPECIFIC_CONSONANTS_O_TO_LETTER_AND_WO_LOWER, '\1wo')
-    input.replace_with_func_multiple(SPECIFIC_CONSONANTS_O_TO_LETTER_AND_WO_UPPER, lambda do |s1, s2|
-      msg = s1
-      msg += s2.upcase == s2 ? 'W' : 'w'
-      msg += s2
-      msg
-    end)
+    input.replace(SPECIFIC_CONSONANTS_O_TO_LETTER_AND_WO_LOWER, '\1wo')
+         .replace_with_func_multiple(SPECIFIC_CONSONANTS_O_TO_LETTER_AND_WO_UPPER, lambda do |s1, s2|
+                                                                                     msg = s1
+                                                                                     msg += s2.upcase == s2 ? 'W' : 'w'
+                                                                                     msg += s2
+                                                                                     msg
+                                                                                   end)
   end
 
   MAP_V_OR_W_LE_TO_WAL = lambda do |input|
@@ -182,8 +181,8 @@ module Mapping
   end
 
   MAP_FI_TO_FWI = lambda do |input|
-    input = input.replace(FI_TO_FWI_LOWER, '\1wi')
-    input.replace(FI_TO_FWI_UPPER, 'FWI')
+    input.replace(FI_TO_FWI_LOWER, '\1wi')
+         .replace(FI_TO_FWI_UPPER, 'FWI')
   end
 
   MAP_VER_TO_WER = lambda do |input|
@@ -203,8 +202,8 @@ module Mapping
   end
 
   MAP_LY_TO_WY = lambda do |input|
-    input = input.replace(LY_TO_WY_LOWER, 'wy')
-    input.replace(LY_TO_WY_UPPER, 'Wy')
+    input.replace(LY_TO_WY_LOWER, 'wy')
+         .replace(LY_TO_WY_UPPER, 'Wy')
   end
 
   MAP_PLE_TO_PWE = lambda do |input|
@@ -212,8 +211,8 @@ module Mapping
   end
 
   MAP_NR_TO_NW = lambda do |input|
-    input = input.replace(NR_TO_NW_LOWER, 'nw')
-    input.replace(NR_TO_NW_UPPER, 'NW')
+    input.replace(NR_TO_NW_LOWER, 'nw')
+         .replace(NR_TO_NW_UPPER, 'NW')
   end
 
   MAP_FUC_TO_FWUC = lambda do |input|
@@ -229,14 +228,14 @@ module Mapping
   end
 
   MAP_N_VOWEL_TO_NY = lambda do |input|
-    input = input.replace(N_VOWEL_TO_NY_FIRST, 'ny\1')
-    input = input.replace(N_VOWEL_TO_NY_SECOND, 'Ny\1')
-    input.replace(N_VOWEL_TO_NY_THIRD, 'NY\1')
+    input.replace(N_VOWEL_TO_NY_FIRST, 'ny\1')
+         .replace(N_VOWEL_TO_NY_SECOND, 'Ny\1')
+         .replace(N_VOWEL_TO_NY_THIRD, 'NY\1')
   end
 
   MAP_OVE_TO_UV = lambda do |input|
-    input = input.replace(OVE_TO_UV_LOWER, 'uv')
-    input.replace(OVE_TO_UV_UPPER, 'UV')
+    input.replace(OVE_TO_UV_LOWER, 'uv')
+         .replace(OVE_TO_UV_UPPER, 'UV')
   end
 
   MAP_HAHA_TO_HEHE_XD = lambda do |input|
@@ -248,8 +247,8 @@ module Mapping
   end
 
   MAP_YOU_TO_U = lambda do |input|
-    input = input.replace(YOU_TO_U_UPPER, 'U')
-    input.replace(YOU_TO_U_LOWER, 'u')
+    input.replace(YOU_TO_U_UPPER, 'U')
+         .replace(YOU_TO_U_LOWER, 'u')
   end
 
   MAP_TIME_TO_TIM = lambda do |input|
