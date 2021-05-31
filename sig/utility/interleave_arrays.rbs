@@ -3,5 +3,5 @@
 # Classes
 class Object
   private
-  def interleave_arrays: (a: Array, b: Array) -> Array
+  def interleave_arrays: (Array a, Array b) -> Array
 end

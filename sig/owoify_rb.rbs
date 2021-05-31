@@ -2,5 +2,5 @@
 
 # Classes
 module Owoify
-  def self.owoify: (source: String, level: String) -> String
+  def self.owoify: (String source, ?String level) -> String
 end
