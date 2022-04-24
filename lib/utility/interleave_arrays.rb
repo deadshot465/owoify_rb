@@ -1,10 +1,10 @@
 # frozen_string_literal: true
 
+
 def interleave_arrays(a, b)
   arr = []
   observed = a
   other = b
-  temp = []
 
   while observed.length.positive?
     arr.push(observed.delete_at(0))

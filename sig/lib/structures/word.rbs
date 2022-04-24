@@ -1,0 +1,21 @@
+# The core structure that stores information of the string to owoify and performs actual owoification.
+class Word
+  @replaced_words: Set[String]
+  @word: String
+
+  def initialize: (String word) -> void
+
+  def to_s: () -> String
+
+  private
+
+  def search_value_contains_replaced_words: (Regexp search_value, String replace_value) -> bool
+
+  public
+
+  def replace: (Regexp search_value, String replace_value, ?bool replace_replaced_words) -> Word
+
+  def replace_with_func_single: (Regexp search_value, Proc func, ?bool replace_replaced_words) -> Word
+
+  def replace_with_func_multiple: (Regexp search_value, Proc func, ?bool replace_replaced_words) -> Word
+end

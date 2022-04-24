@@ -1,0 +1,203 @@
+O_TO_OWO: ::Regexp
+
+EW_TO_UWU: ::Regexp
+
+HEY_TO_HAY: ::Regexp
+
+DEAD_TO_DED_UPPER: ::Regexp
+
+DEAD_TO_DED_LOWER: ::Regexp
+
+N_VOWEL_T_TO_ND: ::Regexp
+
+READ_TO_WEAD_UPPER: ::Regexp
+
+READ_TO_WEAD_LOWER: ::Regexp
+
+BRACKETS_TO_STARTRAILS_FORE: ::Regexp
+
+BRACKETS_TO_STARTRAILS_REAR: ::Regexp
+
+PERIOD_COMMA_EXCLAMATION_SEMICOLON_TO_KAOMOJIS_FIRST: ::Regexp
+
+PERIOD_COMMA_EXCLAMATION_SEMICOLON_TO_KAOMOJIS_SECOND: ::Regexp
+
+THAT_TO_DAT_UPPER: ::Regexp
+
+THAT_TO_DAT_LOWER: ::Regexp
+
+TH_TO_F_UPPER: ::Regexp
+
+TH_TO_F_LOWER: ::Regexp
+
+LE_TO_WAL: ::Regexp
+
+VE_TO_WE_UPPER: ::Regexp
+
+VE_TO_WE_LOWER: ::Regexp
+
+RY_TO_WWY: ::Regexp
+
+RORL_TO_W_UPPER: ::Regexp
+
+RORL_TO_W_LOWER: ::Regexp
+
+LL_TO_WW: ::Regexp
+
+VOWEL_OR_R_EXCEPT_O_L_TO_WL_UPPER: ::Regexp
+
+VOWEL_OR_R_EXCEPT_O_L_TO_WL_LOWER: ::Regexp
+
+OLD_TO_OWLD_UPPER: ::Regexp
+
+OLD_TO_OWLD_LOWER: ::Regexp
+
+OL_TO_OWL_UPPER: ::Regexp
+
+OL_TO_OWL_LOWER: ::Regexp
+
+LORR_O_TO_WO_UPPER: ::Regexp
+
+LORR_O_TO_WO_LOWER: ::Regexp
+
+SPECIFIC_CONSONANTS_O_TO_LETTER_AND_WO_UPPER: ::Regexp
+
+SPECIFIC_CONSONANTS_O_TO_LETTER_AND_WO_LOWER: ::Regexp
+
+VORW_LE_TO_WAL: ::Regexp
+
+FI_TO_FWI_UPPER: ::Regexp
+
+FI_TO_FWI_LOWER: ::Regexp
+
+VER_TO_WER: ::Regexp
+
+POI_TO_PWOI: ::Regexp
+
+SPECIFIC_CONSONANTS_LE_TO_LETTER_AND_WAL: ::Regexp
+
+CONSONANT_R_TO_CONSONANT_W: ::Regexp
+
+LY_TO_WY_UPPER: ::Regexp
+
+LY_TO_WY_LOWER: ::Regexp
+
+PLE_TO_PWE: ::Regexp
+
+NR_TO_NW_UPPER: ::Regexp
+
+NR_TO_NW_LOWER: ::Regexp
+
+FUC_TO_FWUC: ::Regexp
+
+MOM_TO_MWOM: ::Regexp
+
+ME_TO_MWE: ::Regexp
+
+N_VOWEL_TO_NY_FIRST: ::Regexp
+
+N_VOWEL_TO_NY_SECOND: ::Regexp
+
+N_VOWEL_TO_NY_THIRD: ::Regexp
+
+OVE_TO_UV_UPPER: ::Regexp
+
+OVE_TO_UV_LOWER: ::Regexp
+
+HAHA_TO_HEHE_XD: ::Regexp
+
+THE_TO_TEH: ::Regexp
+
+YOU_TO_U_UPPER: ::Regexp
+
+YOU_TO_U_LOWER: ::Regexp
+
+TIME_TO_TIM: ::Regexp
+
+OVER_TO_OWOR: ::Regexp
+
+WORSE_TO_WOSE: ::Regexp
+
+FACES: ::Array[::String]
+
+module Mapping
+  MAP_O_TO_OWO: Proc
+
+  MAP_EW_TO_UWU: Proc
+
+  MAP_HEY_TO_HAY: Proc
+
+  MAP_DEAD_TO_DED: Proc
+
+  MAP_N_VOWEL_T_TO_ND: Proc
+
+  MAP_READ_TO_WEAD: Proc
+
+  MAP_BRACKETS_TO_STAR_TRAILS: Proc
+
+  MAP_PERIOD_COMMA_EXCLAMATION_SEMICOLON_TO_KAOMOJIS: Proc
+
+  MAP_THAT_TO_DAT: Proc
+
+  MAP_TH_TO_F: Proc
+
+  MAP_LE_TO_WAL: Proc
+
+  MAP_VE_TO_WE: Proc
+
+  MAP_RY_TO_WWY: Proc
+
+  MAP_R_OR_L_TO_W: Proc
+
+  MAP_LL_TO_WW: Proc
+
+  MAP_VOWEL_OR_R_EXCEPT_O_L_TO_WL: Proc
+
+  MAP_OLD_TO_OWLD: Proc
+
+  MAP_OL_TO_OWL: Proc
+
+  MAP_L_OR_R_O_TO_WO: Proc
+
+  MAP_SPECIFIC_CONSONANTS_O_TO_LETTER_AND_WO: Proc
+
+  MAP_V_OR_W_LE_TO_WAL: Proc
+
+  MAP_FI_TO_FWI: Proc
+
+  MAP_VER_TO_WER: Proc
+
+  MAP_POI_TO_PWOI: Proc
+
+  MAP_SPECIFIC_CONSONANTS_LE_TO_LETTER_AND_WAL: Proc
+
+  MAP_CONSONANT_R_TO_CONSONANT_W: Proc
+
+  MAP_LY_TO_WY: Proc
+
+  MAP_PLE_TO_PWE: Proc
+
+  MAP_NR_TO_NW: Proc
+
+  MAP_FUC_TO_FWUC: Proc
+
+  MAP_MOM_TO_MWOM: Proc
+
+  MAP_ME_TO_MWE: Proc
+
+  MAP_N_VOWEL_TO_NY: Proc
+
+  MAP_OVE_TO_UV: Proc
+
+  MAP_HAHA_TO_HEHE_XD: Proc
+
+  MAP_THE_TO_TEH: Proc
+
+  MAP_YOU_TO_U: Proc
+
+  MAP_TIME_TO_TIM: Proc
+
+  MAP_OVER_TO_OWOR: Proc
+
+  MAP_WORSE_TO_WOSE: Proc
+end

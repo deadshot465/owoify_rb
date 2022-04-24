@@ -1,3 +1,9 @@
+## 1.0.0
+- **(Breaking change)** Change owoness level from strings to symbols.
+- Add proper RBS type signature to internal function(s).
+- Improve documentation.
+- Implement correct RBS signatures.
+
 ## 0.1.0
 - Apply RuboCop
 - Fix some bugs

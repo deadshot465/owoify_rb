@@ -1,0 +1,7 @@
+SPECIFIC_WORD_MAPPING_LIST: ::Array[Proc]
+
+UVU_MAPPING_LIST: ::Array[Proc]
+
+UWU_MAPPING_LIST: ::Array[Proc]
+
+OWO_MAPPING_LIST: ::Array[Proc]

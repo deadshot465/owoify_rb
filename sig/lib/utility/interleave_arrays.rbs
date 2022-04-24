@@ -1,0 +1,3 @@
+class Object
+  def interleave_arrays: (Array[any] a, Array[any] b) -> Array[any]
+end

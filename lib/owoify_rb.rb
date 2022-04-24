@@ -9,29 +9,31 @@ require 'utility/presets'
 module Owoify
   # The main entry point of the owoify function.
   # Pass in the source string and the desired owoify level.
-  def self.owoify(source, level = 'owo')
+  # @param [String] source The source string to owoify.
+  # @param [Symbol] level The desired owoness level of the result string.
+  # @return [String] The owoified string according to the specified owoness level.
+  def self.owoify(source, level = :owo)
     word_matches = source.scan(/[^\s]+/).flatten
     space_matches = source.scan(/\s+/).flatten
     words = word_matches.map { |x| Word.new(x) }
     spaces = space_matches.map { |x| Word.new(x) }
-    actual_level = level.downcase
     words.map! do |w|
       SPECIFIC_WORD_MAPPING_LIST.each do |f|
         w = f.call(w)
       end
-      case actual_level
-      when 'owo'
+      case level
+      when :owo
         OWO_MAPPING_LIST.each do |f|
           w = f.call(w)
         end
-      when 'uwu'
+      when :uwu
         UWU_MAPPING_LIST.each do |f|
           w = f.call(w)
         end
         OWO_MAPPING_LIST.each do |f|
           w = f.call(w)
         end
-      when 'uvu'
+      when :uvu
         UVU_MAPPING_LIST.each do |f|
           w = f.call(w)
         end

@@ -1,0 +1,10 @@
+# Owoify module is the main module where owoify function lies in.
+# Since owoify is literally just a function, users are expected to invoke owoify by calling Owoify.owoify().
+module Owoify
+  # The main entry point of the owoify function.
+  # Pass in the source string and the desired owoify level.
+  # @param [String] source The source string to owoify.
+  # @param [Symbol] level The desired owoness level of the result string.
+  # @return [String] The owoified string according to the specified owoness level.
+  def self.owoify: (String source, ?::Symbol level) -> String
+end
