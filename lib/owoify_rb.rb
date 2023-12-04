@@ -53,4 +53,18 @@ module Owoify
     result_strings = result.map(&:to_s)
     result_strings.join
   end
+
+  # Owoify the source string using :uwu owoness.
+  # @param [String] source The source string to owoify
+  # @return [String] The owoified string using :uwu owoness level.
+  def self.uwuify(source)
+    self.owoify(source, :uwu)
+  end
+
+  # Owoify the source string using :uvu owoness.
+  # @param [String] source The source string to owoify
+  # @return [String] The owoified string using :uvu owoness level.
+  def self.uvuify(source)
+    self.owoify(source, :uvu)
+  end
 end

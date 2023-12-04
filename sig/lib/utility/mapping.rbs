@@ -88,11 +88,19 @@ NR_TO_NW_UPPER: ::Regexp
 
 NR_TO_NW_LOWER: ::Regexp
 
+MEM_TO_MWEM_UPPER: Regexp
+
+MEM_TO_MWEM_LOWER: Regexp
+
+NYWO_TO_NYO: Regexp
+
 FUC_TO_FWUC: ::Regexp
 
 MOM_TO_MWOM: ::Regexp
 
-ME_TO_MWE: ::Regexp
+ME_TO_MWE_UPPER: Regexp
+
+ME_TO_MWE_LOWER: Regexp
 
 N_VOWEL_TO_NY_FIRST: ::Regexp
 
@@ -117,6 +125,24 @@ TIME_TO_TIM: ::Regexp
 OVER_TO_OWOR: ::Regexp
 
 WORSE_TO_WOSE: ::Regexp
+
+GREAT_TO_GWATE: Regexp
+
+AVIAT_TO_AWIAT: Regexp
+
+DEDICAT_TO_DEDITAT: Regexp
+
+REMEMBER_TO_REMBER: Regexp
+
+WHEN_TO_WEN: Regexp
+
+FRIGHTENED_TO_FRIGTEN: Regexp
+
+MEME_TO_MEM_FIRST: Regexp
+
+MEME_TO_MEM_SECOND: Regexp
+
+FEEL_TO_FELL: Regexp
 
 FACES: ::Array[::String]
 
@@ -179,6 +205,10 @@ module Mapping
 
   MAP_NR_TO_NW: Proc
 
+  MAP_MEM_TO_MWEM: Proc
+
+  UNMAP_NYWO_TO_NYO: Proc
+
   MAP_FUC_TO_FWUC: Proc
 
   MAP_MOM_TO_MWOM: Proc
@@ -200,4 +230,20 @@ module Mapping
   MAP_OVER_TO_OWOR: Proc
 
   MAP_WORSE_TO_WOSE: Proc
+
+  MAP_GREAT_TO_GWATE: Proc
+
+  MAP_AVIAT_TO_AWIAT: Proc
+
+  MAP_DEDICAT_TO_DEDITAT: Proc
+
+  MAP_REMEMBER_TO_REMBER: Proc
+
+  MAP_WHEN_TO_WEN: Proc
+
+  MAP_FRIGHTENED_TO_FRIGTEN: Proc
+
+  MAP_MEME_TO_MEM: Proc
+
+  MAP_FEEL_TO_FELL: Proc
 end

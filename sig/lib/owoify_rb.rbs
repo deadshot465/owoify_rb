@@ -6,5 +6,15 @@ module Owoify
   # @param [String] source The source string to owoify.
   # @param [Symbol] level The desired owoness level of the result string.
   # @return [String] The owoified string according to the specified owoness level.
-  def self.owoify: (String source, ?::Symbol level) -> String
+  def self.owoify: (String source, ?Symbol level) -> String
+
+  # Owoify the source string using :uwu owoness.
+  # @param [String] source The source string to owoify
+  # @return [String] The owoified string using :uwu owoness level.
+  def self.uwuify: (String source) -> String
+
+  # Owoify the source string using :uvu owoness.
+  # @param [String] source The source string to owoify
+  # @return [String] The owoified string using :uvu owoness level.
+  def self.uvuify: (String source) -> String
 end

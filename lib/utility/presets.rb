@@ -4,8 +4,11 @@ require 'utility/mapping'
 
 SPECIFIC_WORD_MAPPING_LIST = [
   Mapping::MAP_FUC_TO_FWUC, Mapping::MAP_MOM_TO_MWOM, Mapping::MAP_TIME_TO_TIM, Mapping::MAP_ME_TO_MWE,
-  Mapping::MAP_N_VOWEL_TO_NY, Mapping::MAP_OVER_TO_OWOR, Mapping::MAP_OVE_TO_UV, Mapping::MAP_HAHA_TO_HEHE_XD,
-  Mapping::MAP_THE_TO_TEH, Mapping::MAP_YOU_TO_U, Mapping::MAP_READ_TO_WEAD, Mapping::MAP_WORSE_TO_WOSE
+  Mapping::MAP_OVER_TO_OWOR, Mapping::MAP_OVE_TO_UV, Mapping::MAP_HAHA_TO_HEHE_XD,
+  Mapping::MAP_THE_TO_TEH, Mapping::MAP_YOU_TO_U, Mapping::MAP_READ_TO_WEAD, Mapping::MAP_WORSE_TO_WOSE,
+  Mapping::MAP_GREAT_TO_GWATE, Mapping::MAP_AVIAT_TO_AWIAT, Mapping::MAP_DEDICAT_TO_DEDITAT,
+  Mapping::MAP_REMEMBER_TO_REMBER, Mapping::MAP_WHEN_TO_WEN, Mapping::MAP_FRIGHTENED_TO_FRIGTEN,
+  Mapping::MAP_MEME_TO_MEM, Mapping::MAP_FEEL_TO_FELL
 ].freeze
 
 UVU_MAPPING_LIST = [
@@ -20,9 +23,10 @@ UWU_MAPPING_LIST = [
 ].freeze
 
 OWO_MAPPING_LIST = [
-  Mapping::MAP_LL_TO_WW, Mapping::MAP_VOWEL_OR_R_EXCEPT_O_L_TO_WL, Mapping::MAP_OLD_TO_OWLD,
+  Mapping::MAP_N_VOWEL_TO_NY, Mapping::MAP_LL_TO_WW, Mapping::MAP_VOWEL_OR_R_EXCEPT_O_L_TO_WL, Mapping::MAP_OLD_TO_OWLD,
   Mapping::MAP_OL_TO_OWL, Mapping::MAP_L_OR_R_O_TO_WO, Mapping::MAP_SPECIFIC_CONSONANTS_O_TO_LETTER_AND_WO,
   Mapping::MAP_V_OR_W_LE_TO_WAL, Mapping::MAP_FI_TO_FWI, Mapping::MAP_VER_TO_WER, Mapping::MAP_POI_TO_PWOI,
   Mapping::MAP_SPECIFIC_CONSONANTS_LE_TO_LETTER_AND_WAL, Mapping::MAP_CONSONANT_R_TO_CONSONANT_W,
-  Mapping::MAP_LY_TO_WY, Mapping::MAP_PLE_TO_PWE, Mapping::MAP_NR_TO_NW
+  Mapping::MAP_LY_TO_WY, Mapping::MAP_PLE_TO_PWE, Mapping::MAP_NR_TO_NW, Mapping::MAP_MEM_TO_MWEM,
+  Mapping::UNMAP_NYWO_TO_NYO
 ].freeze

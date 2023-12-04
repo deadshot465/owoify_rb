@@ -46,10 +46,14 @@ LY_TO_WY_UPPER = /Ly/.freeze
 LY_TO_WY_LOWER = /ly/.freeze
 PLE_TO_PWE = /([Pp])le/.freeze
 NR_TO_NW_UPPER = /NR/.freeze
-NR_TO_NW_LOWER = /nr/.freeze
+NR_TO_NW_LOWER = /([Nn])r/.freeze
+MEM_TO_MWEM_UPPER = /Mem/.freeze
+MEM_TO_MWEM_LOWER = /mem/.freeze
+NYWO_TO_NYO = /([Nn])ywo/.freeze
 FUC_TO_FWUC = /([Ff])uc/.freeze
 MOM_TO_MWOM = /([Mm])om/.freeze
-ME_TO_MWE = /([Mm])e/.freeze
+ME_TO_MWE_UPPER = /^Me$/.freeze
+ME_TO_MWE_LOWER = /^me$/.freeze
 N_VOWEL_TO_NY_FIRST = /n([aeiou])/.freeze
 N_VOWEL_TO_NY_SECOND = /N([aeiou])/.freeze
 N_VOWEL_TO_NY_THIRD = /N([AEIOU])/.freeze
@@ -62,6 +66,15 @@ YOU_TO_U_LOWER = /\byou\b/.freeze
 TIME_TO_TIM = /\b([Tt])ime\b/.freeze
 OVER_TO_OWOR = /([Oo])ver/.freeze
 WORSE_TO_WOSE = /([Ww])orse/.freeze
+GREAT_TO_GWATE = /([Gg])reat/.freeze
+AVIAT_TO_AWIAT = /([Aa])viat/.freeze
+DEDICAT_TO_DEDITAT = /([Dd])edicat/.freeze
+REMEMBER_TO_REMBER = /([Rr])emember/.freeze
+WHEN_TO_WEN = /([Ww])hen/.freeze
+FRIGHTENED_TO_FRIGTEN = /([Ff])righten(ed)*/.freeze
+MEME_TO_MEM_FIRST = /Meme/.freeze
+MEME_TO_MEM_SECOND = /Mem/.freeze
+FEEL_TO_FELL = /^([Ff])eel$/.freeze
 
 FACES = [
   '(・`ω´・)', ';;w;;', 'owo', 'UwU', '>w<', '^w^', '(* ^ ω ^)',
@@ -211,8 +224,17 @@ module Mapping
   end
 
   MAP_NR_TO_NW = lambda do |input|
-    input.replace(NR_TO_NW_LOWER, 'nw')
+    input.replace(NR_TO_NW_LOWER, '\1w')
          .replace(NR_TO_NW_UPPER, 'NW')
+  end
+
+  MAP_MEM_TO_MWEM = lambda do |input|
+    input.replace(MEM_TO_MWEM_UPPER, 'mwem')
+         .replace(MEM_TO_MWEM_LOWER, 'Mwem')
+  end
+
+  UNMAP_NYWO_TO_NYO = lambda do |input|
+    input.replace(NYWO_TO_NYO, '\1yo')
   end
 
   MAP_FUC_TO_FWUC = lambda do |input|
@@ -224,7 +246,8 @@ module Mapping
   end
 
   MAP_ME_TO_MWE = lambda do |input|
-    input.replace(ME_TO_MWE, '\1we')
+    input.replace(ME_TO_MWE_UPPER, 'Mwe')
+         .replace(ME_TO_MWE_LOWER, 'mwe')
   end
 
   MAP_N_VOWEL_TO_NY = lambda do |input|
@@ -261,5 +284,38 @@ module Mapping
 
   MAP_WORSE_TO_WOSE = lambda do |input|
     input.replace(WORSE_TO_WOSE, '\1ose')
+  end
+
+  MAP_GREAT_TO_GWATE = lambda do |input|
+    input.replace(GREAT_TO_GWATE, '\1wate')
+  end
+
+  MAP_AVIAT_TO_AWIAT = lambda do |input|
+    input.replace(AVIAT_TO_AWIAT, '\1wiat')
+  end
+
+  MAP_DEDICAT_TO_DEDITAT = lambda do |input|
+    input.replace(DEDICAT_TO_DEDITAT, '\1editat')
+  end
+
+  MAP_REMEMBER_TO_REMBER = lambda do |input|
+    input.replace(REMEMBER_TO_REMBER, '\1ember')
+  end
+
+  MAP_WHEN_TO_WEN = lambda do |input|
+    input.replace(WHEN_TO_WEN, '\1en')
+  end
+
+  MAP_FRIGHTENED_TO_FRIGTEN = lambda do |input|
+    input.replace(FRIGHTENED_TO_FRIGTEN, '\1rigten')
+  end
+
+  MAP_MEME_TO_MEM = lambda do |input|
+    input.replace(MEME_TO_MEM_FIRST, 'mem')
+         .replace(MEME_TO_MEM_SECOND, 'Mem')
+  end
+
+  MAP_FEEL_TO_FELL = lambda do |input|
+    input.replace(FEEL_TO_FELL, '\1ell')
   end
 end

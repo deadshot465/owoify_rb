@@ -1,7 +1,7 @@
 Gem::Specification.new do |s|
   s.name = 'owoify_rb'
-  s.version = '1.0.0'
-  s.date = '2022-04-24'
+  s.version = '1.1.0'
+  s.date = '2023-12-04'
   s.summary = 'Turning your worst nightmare into a Ruby gem.'
   s.description = "This is a Ruby port of mohan-cao's owoify-js, which will help you turn any string into nonsensical babyspeak similar to LeafySweet's infamous Chrome extension."
   s.authors = ['Chehui Chou']
